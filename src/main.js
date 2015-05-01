@@ -1,5 +1,14 @@
+'use strict';
+
+var v8 = require('v8');
+v8.setFlagsFromString('--harmony_classes');
+v8.setFlagsFromString('--harmony_object_literals');
+v8.setFlagsFromString('--harmony_tostring');
+
 var app = require('app');  // Module to control application life.
 var BrowserWindow = require('browser-window');  // Module to create native browser window.
+
+app.commandLine.appendSwitch('remote-debugging-port', '9777');
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the javascript object is GCed.

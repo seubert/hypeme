@@ -32,7 +32,7 @@ gulp.task('css', function() {
 gulp.task('js', function() {
   browserify(paths.app_js)
     .transform(reactify)
-    .bundle()
+    .pipe(babel())
     .pipe(source('app.js'))
     .pipe(gulp.dest('./build/components'))
 });
