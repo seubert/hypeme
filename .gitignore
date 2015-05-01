@@ -1,0 +1,7 @@
+*.log
+node_modules/
+*.db
+.DS_STORE/
+build/
+*.sublime-project
+*.sublime-workspace
